@@ -1014,11 +1014,16 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
+      body { overflow-x: hidden; }
+      nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      section { padding: 72px 24px; }
-      .hero { padding: 100px 24px 72px; }
+      section { padding: 64px 20px; }
+      .hero { padding: 100px 20px 64px; }
+      .hero h1 { font-size: clamp(36px, 11vw, 52px); letter-spacing: -1px; }
+      .hero-badge { font-size: 9px; letter-spacing: 2px; padding: 8px 14px; }
+      .hero-sub { font-size: 16px; }
+      .btn-primary, .btn-secondary { padding: 16px 28px; font-size: 11px; }
       .hero-stats { flex-direction: column; gap: 32px; }
       .stat-item { border-right: none; border-bottom: 1px dashed var(--border-subtle); padding: 0 0 32px; }
       .stat-item:last-child { border-bottom: none; }
@@ -1047,10 +1052,15 @@
       .faq-item { border-right: none; }
       .faq-item:nth-last-child(-n+2) { border-bottom: 1px dashed var(--border-subtle); }
       .faq-item:last-child { border-bottom: none; }
-      .results-inner { padding: 48px 24px; }
+      .results-inner { padding: 40px 20px; }
       .results-nums { grid-template-columns: repeat(2, 1fr); }
+      .result-item { padding: 24px 16px; }
+      .result-num { font-size: 40px; }
+      .result-label { font-size: 10px; }
       .footer-top { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+      .cta-band { padding: 60px 20px; }
+      footer { padding: 60px 20px 32px; }
     }
   </style>
 </head>
