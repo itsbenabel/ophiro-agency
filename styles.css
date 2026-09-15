@@ -224,7 +224,7 @@ p { line-height: 1.7; color: var(--body); }
 .proof-copy h2 { font-size: clamp(2.3rem, 4vw, 3.75rem); }
 .proof-copy blockquote { margin: 34px 0; padding-left: 24px; border-left: 2px solid var(--blue); color: #a8bac9; font-size: .88rem; line-height: 1.75; }
 .founder-line { display: grid; grid-template-columns: 38px 1fr; align-items: center; column-gap: 12px; margin: 0; }
-.founder-line > span { grid-row: 1 / 3; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; color: #c6e2fb; background: #183d5f; font-size: .62rem; }
+.founder-line > img { grid-row: 1 / 3; width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
 .founder-line strong { color: #dce8f2; font-size: .7rem; }
 .founder-line small { color: #617b92; font-size: .6rem; }
 
