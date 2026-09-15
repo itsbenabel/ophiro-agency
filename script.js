@@ -15,7 +15,7 @@
   const updateChrome = () => {
     const scrolled = window.scrollY > 24;
     header.classList.toggle('scrolled', scrolled);
-    stickyCta?.classList.toggle('visible', window.scrollY > 620 && !dialog?.open);
+    stickyCta?.classList.toggle('visible', window.scrollY > 300 && !dialog?.open);
   };
 
   updateChrome();

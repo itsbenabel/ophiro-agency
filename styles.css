@@ -118,6 +118,15 @@ p { line-height: 1.7; color: var(--body); }
 .cred-item > span { display: grid; gap: 4px; color: #72879a; font-size: .59rem; }
 .cred-item strong { color: #c8d5e0; font-size: .69rem; }
 
+/* Logo strip */
+.logo-strip { padding: 52px 0; background: var(--mist); border-bottom: 1px solid var(--line); }
+.logo-strip-label { margin: 0 0 28px; text-align: center; text-transform: uppercase; letter-spacing: .14em; font-size: .64rem; font-weight: 700; color: #97a3b0; }
+.logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 46px 56px; }
+.logo-item { height: 30px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .5; transition: filter .2s ease, opacity .2s ease; }
+.logo-item:hover { filter: grayscale(0); opacity: 1; }
+.logo-telekom { height: 26px; }
+.logo-lerwick { height: 52px; }
+
 /* Shared headings */
 .section-heading { margin-bottom: 64px; }
 .section-heading h2 { max-width: 720px; }
@@ -224,7 +233,6 @@ p { line-height: 1.7; color: var(--body); }
 .proof-number > strong { margin: 15px 0 6px; font-size: clamp(5rem, 9vw, 8rem); line-height: 1; letter-spacing: -.08em; color: #fff; }
 .proof-number > strong span { color: #5eb3ff; }
 .proof-number p { color: #9bb0c2; font-size: .78rem; max-width: 300px; }
-.proof-number small { color: #506a81; font-size: .57rem; }
 .proof-copy h2 { font-size: clamp(2.3rem, 4vw, 3.75rem); }
 .proof-copy blockquote { margin: 34px 0; padding-left: 24px; border-left: 2px solid var(--blue); color: #a8bac9; font-size: .88rem; line-height: 1.75; }
 .founder-line { display: grid; grid-template-columns: 38px 1fr; align-items: center; column-gap: 12px; margin: 0; }
