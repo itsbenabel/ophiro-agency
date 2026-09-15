@@ -107,22 +107,62 @@
 
   const CPL = 100;
   const CPQL = 300;
+  const CLOSE_RATE = 0.25;
   const spendInput = document.querySelector('#calc-spend');
   const revenueInput = document.querySelector('#calc-revenue');
+  const spendValueLabel = document.querySelector('[data-calc-spend-value]');
+  const revenueValueLabel = document.querySelector('[data-calc-revenue-value]');
   const gbp = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
+
+  const setRangeProgress = (input) => {
+    if (!input) return;
+    const min = Number(input.min) || 0;
+    const max = Number(input.max) || 100;
+    const pct = ((Number(input.value) - min) / (max - min)) * 100;
+    input.style.setProperty('--range-progress', `${pct}%`);
+  };
+
+  const tweenValues = {};
+  const animateNumber = (key, el, from, to, format, duration = 350) => {
+    if (!el) return;
+    cancelAnimationFrame(tweenValues[key]);
+    const start = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - (1 - t) * (1 - t);
+      el.textContent = format(from + (to - from) * eased);
+      if (t < 1) tweenValues[key] = requestAnimationFrame(step);
+    };
+    tweenValues[key] = requestAnimationFrame(step);
+  };
+
+  const previous = { leads: 0, qualified: 0, customers: 0, revenue: 0, roas: 0 };
 
   const updateCalculator = () => {
     const spend = Number(spendInput?.value) || 0;
     const avgRevenue = Number(revenueInput?.value) || 0;
     const leads = spend / CPL;
     const qualifiedLeads = spend / CPQL;
-    const revenue = qualifiedLeads * avgRevenue;
+    const customers = qualifiedLeads * CLOSE_RATE;
+    const revenue = customers * avgRevenue;
     const roas = spend > 0 ? revenue / spend : 0;
 
-    document.querySelector('[data-calc-leads]').textContent = spend > 0 ? Math.round(leads).toLocaleString('en-GB') : '–';
-    document.querySelector('[data-calc-qualified]').textContent = spend > 0 ? qualifiedLeads.toFixed(1) : '–';
-    document.querySelector('[data-calc-revenue]').textContent = avgRevenue > 0 ? gbp.format(revenue) : '–';
-    document.querySelector('[data-calc-roas]').textContent = avgRevenue > 0 ? `${roas.toFixed(1)}x` : '–';
+    if (spendValueLabel) spendValueLabel.textContent = gbp.format(spend);
+    if (revenueValueLabel) revenueValueLabel.textContent = gbp.format(avgRevenue);
+    setRangeProgress(spendInput);
+    setRangeProgress(revenueInput);
+
+    animateNumber('leads', document.querySelector('[data-calc-leads]'), previous.leads, leads, (v) => Math.round(v).toLocaleString('en-GB'));
+    animateNumber('qualified', document.querySelector('[data-calc-qualified]'), previous.qualified, qualifiedLeads, (v) => v.toFixed(1));
+    animateNumber('customers', document.querySelector('[data-calc-customers]'), previous.customers, customers, (v) => v.toFixed(1));
+    animateNumber('revenue', document.querySelector('[data-calc-revenue]'), previous.revenue, revenue, (v) => gbp.format(v));
+    animateNumber('roas', document.querySelector('[data-calc-roas]'), previous.roas, roas, (v) => `${v.toFixed(1)}x`);
+
+    previous.leads = leads;
+    previous.qualified = qualifiedLeads;
+    previous.customers = customers;
+    previous.revenue = revenue;
+    previous.roas = roas;
   };
 
   spendInput?.addEventListener('input', updateCalculator);
