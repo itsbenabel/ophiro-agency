@@ -247,31 +247,33 @@
         <div class="section-heading centre reveal">
           <p class="eyebrow dark"><span></span> Estimate your return</p>
           <h2>See what your ad spend could <em>return in revenue.</em></h2>
-          <p>Based on a typical £100 cost per lead and £300 cost per qualified lead, enter your average customer revenue to estimate the pipeline a given monthly spend could generate.</p>
+          <p>Based on a typical £100 cost per lead, £300 cost per qualified lead and a 25% qualified-to-customer close rate, slide to your monthly spend and average customer revenue to estimate the pipeline it could generate.</p>
         </div>
         <div class="calculator-shell reveal">
           <div class="calculator-inputs">
             <label>
-              <span>Monthly ad spend (£)</span>
-              <input type="number" id="calc-spend" value="5000" min="0" step="100" inputmode="numeric">
+              <span>Monthly ad spend <strong data-calc-spend-value>£5,000</strong></span>
+              <input type="range" id="calc-spend" min="500" max="50000" step="250" value="5000" aria-label="Monthly ad spend">
             </label>
             <label>
-              <span>Your average customer revenue (£)</span>
-              <input type="number" id="calc-revenue" placeholder="e.g. 2500" min="0" step="50" inputmode="numeric">
+              <span>Your average customer revenue <strong data-calc-revenue-value>£2,500</strong></span>
+              <input type="range" id="calc-revenue" min="0" max="20000" step="100" value="2500" aria-label="Average customer revenue">
             </label>
             <div class="calculator-assumptions">
               <div><span>Assumed cost per lead</span><strong>£100</strong></div>
               <div><span>Assumed cost per qualified lead</span><strong>£300</strong></div>
+              <div><span>Assumed qualified-to-customer rate</span><strong>25%</strong></div>
             </div>
           </div>
           <div class="calculator-results">
             <div class="result-card"><span>Leads generated</span><strong data-calc-leads>–</strong></div>
             <div class="result-card"><span>Qualified leads</span><strong data-calc-qualified>–</strong></div>
+            <div class="result-card"><span>Customers won</span><strong data-calc-customers>–</strong></div>
             <div class="result-card"><span>Estimated revenue</span><strong data-calc-revenue>–</strong></div>
-            <div class="result-card accent"><span>Return on ad spend</span><strong data-calc-roas>–</strong></div>
+            <div class="result-card accent wide"><span>Return on ad spend</span><strong data-calc-roas>–</strong></div>
           </div>
         </div>
-        <p class="calculator-note reveal">Illustrative only, based on your inputs and the assumed cost figures above. Assumes each qualified lead is followed up promptly and has the potential to convert into a customer; actual conversion rates depend on your offer, sales process and follow-up speed. Ophiro does not guarantee lead volumes, closed deals, revenue or return on advertising spend.</p>
+        <p class="calculator-note reveal">Illustrative only, based on your inputs and the assumed figures above. The 25% close rate reflects a typical range for well-qualified, high-ticket service leads with prompt follow-up; actual conversion rates depend on your offer, sales process and follow-up speed. Ophiro does not guarantee lead volumes, closed deals, revenue or return on advertising spend.</p>
       </div>
     </section>
 
