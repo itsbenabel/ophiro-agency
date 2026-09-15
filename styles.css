@@ -125,6 +125,7 @@ p { line-height: 1.7; color: var(--body); }
 .logo-item { height: 30px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .5; transition: filter .2s ease, opacity .2s ease; }
 .logo-item:hover { filter: grayscale(0); opacity: 1; }
 .logo-telekom { height: 26px; }
+.logo-lerwick { height: 52px; }
 
 /* Shared headings */
 .section-heading { margin-bottom: 64px; }
