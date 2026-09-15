@@ -105,6 +105,30 @@
     reveals.forEach((element) => element.classList.add('is-visible'));
   }
 
+  const CPL = 100;
+  const CPQL = 300;
+  const spendInput = document.querySelector('#calc-spend');
+  const revenueInput = document.querySelector('#calc-revenue');
+  const gbp = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP', maximumFractionDigits: 0 });
+
+  const updateCalculator = () => {
+    const spend = Number(spendInput?.value) || 0;
+    const avgRevenue = Number(revenueInput?.value) || 0;
+    const leads = spend / CPL;
+    const qualifiedLeads = spend / CPQL;
+    const revenue = qualifiedLeads * avgRevenue;
+    const roas = spend > 0 ? revenue / spend : 0;
+
+    document.querySelector('[data-calc-leads]').textContent = spend > 0 ? Math.round(leads).toLocaleString('en-GB') : '–';
+    document.querySelector('[data-calc-qualified]').textContent = spend > 0 ? qualifiedLeads.toFixed(1) : '–';
+    document.querySelector('[data-calc-revenue]').textContent = avgRevenue > 0 ? gbp.format(revenue) : '–';
+    document.querySelector('[data-calc-roas]').textContent = avgRevenue > 0 ? `${roas.toFixed(1)}x` : '–';
+  };
+
+  spendInput?.addEventListener('input', updateCalculator);
+  revenueInput?.addEventListener('input', updateCalculator);
+  updateCalculator();
+
   document.querySelectorAll('.faq-list details').forEach((detail) => {
     detail.addEventListener('toggle', () => {
       if (!detail.open) return;

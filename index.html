@@ -24,6 +24,7 @@
         <a href="#fit">Who it’s for</a>
         <a href="#process">How it works</a>
         <a href="#difference">Why Ophiro</a>
+        <a href="#calculator">ROI calculator</a>
         <a href="#faq">FAQs</a>
       </nav>
       <a class="button button-small nav-cta" href="#book">Book a strategy call</a>
@@ -37,6 +38,7 @@
       <a href="#fit">Who it’s for</a>
       <a href="#process">How it works</a>
       <a href="#difference">Why Ophiro</a>
+      <a href="#calculator">ROI calculator</a>
       <a href="#faq">FAQs</a>
       <a class="button" href="#book">Book a strategy call</a>
     </nav>
@@ -217,47 +219,6 @@
       </div>
     </section>
 
-    <section class="section journey-section">
-      <div class="container">
-        <div class="section-heading split-heading reveal">
-          <div>
-            <p class="eyebrow dark"><span></span> An illustrative customer journey</p>
-            <h2>From active search to a <em>sales-ready conversation.</em></h2>
-          </div>
-          <p>Consider a serious buyer searching for a specialist service with a defined need, budget and reason to act.</p>
-        </div>
-        <div class="scenario-shell reveal">
-          <div class="scenario-progress"><span class="active"></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="scenario-grid">
-            <div class="scenario-step"><b>01</b><div class="scenario-icon">⌕</div><h3>Search</h3><p>A high-intent query reveals a specific, valuable need.</p></div>
-            <div class="scenario-step"><b>02</b><div class="scenario-icon">Aa</div><h3>Relevant advert</h3><p>Messaging speaks directly to the buyer’s problem.</p></div>
-            <div class="scenario-step"><b>03</b><div class="scenario-icon">▤</div><h3>Matched page</h3><p>The journey explains the service and next step.</p></div>
-            <div class="scenario-step"><b>04</b><div class="scenario-icon">✓</div><h3>Qualification</h3><p>Fit, requirements, budget and timescale are captured.</p></div>
-            <div class="scenario-step"><b>05</b><div class="scenario-icon">↗</div><h3>Routing</h3><p>The right salesperson receives the source and context.</p></div>
-            <div class="scenario-step"><b>06</b><div class="scenario-icon">⌁</div><h3>Feedback</h3><p>Qualified calls and closed deals inform future decisions.</p></div>
-          </div>
-          <div class="scenario-note"><span>i</span> Illustrative journey only. Actual sales outcomes depend on the offer, market, budget and sales process.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section outcomes-section">
-      <div class="container outcomes-grid">
-        <div class="outcomes-copy reveal">
-          <p class="eyebrow light"><span></span> Designed for better decisions</p>
-          <h2>Improve the quality, speed and visibility of direct acquisition.</h2>
-          <p>The objective is a healthier revenue engine, not a prettier cost-per-lead report.</p>
-          <a class="button button-light button-arrow" href="#book">Talk through your current system <span>↗</span></a>
-        </div>
-        <div class="outcome-panels reveal reveal-delay">
-          <article><span class="outcome-letter">Q</span><div><h3>Quality</h3><p>More commercially relevant opportunities and less sales time lost to obvious poor fits.</p></div></article>
-          <article><span class="outcome-letter">S</span><div><h3>Speed</h3><p>Faster response, consistent routing and structured follow-up across the team.</p></div></article>
-          <article><span class="outcome-letter">V</span><div><h3>Visibility</h3><p>A clearer connection between campaigns, qualified calls, proposals and closed business.</p></div></article>
-        </div>
-      </div>
-      <div class="container results-note reveal">Outcomes vary and depend on your offer, budget, market, website, response speed and sales process. Ophiro does not guarantee lead volumes, closed deals, revenue or return on advertising spend.</div>
-    </section>
-
     <section class="section difference-section" id="difference">
       <div class="container">
         <div class="section-heading split-heading reveal">
@@ -323,6 +284,39 @@
           <article class="fit-card fit-yes reveal"><div class="fit-heading"><span>✓</span><h3>Likely a fit if…</h3></div><ul><li>You sell a proven high-value service</li><li>Your average customer value supports paid acquisition</li><li>You have a dedicated sales or enquiry-handling team</li><li>Your team can respond rapidly to new enquiries</li><li>You can invest £5,000+ monthly in paid media</li><li>You will record and share pipeline outcomes</li></ul></article>
           <article class="fit-card fit-no reveal"><div class="fit-heading"><span>×</span><h3>Probably not a fit if…</h3></div><ul><li>Your offer is unproven or very low-ticket</li><li>You have no meaningful paid-media budget</li><li>You need only social posts or isolated PPC activity</li><li>Your team cannot respond to enquiries promptly</li><li>You will not track outcomes after the form</li><li>You expect guaranteed leads, sales or revenue</li></ul></article>
         </div>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-heading centre reveal">
+          <p class="eyebrow dark"><span></span> Estimate your return</p>
+          <h2>See what your ad spend could <em>return in revenue.</em></h2>
+          <p>Based on a typical £100 cost per lead and £300 cost per qualified lead, enter your average customer revenue to estimate the pipeline a given monthly spend could generate.</p>
+        </div>
+        <div class="calculator-shell reveal">
+          <div class="calculator-inputs">
+            <label>
+              <span>Monthly ad spend (£)</span>
+              <input type="number" id="calc-spend" value="5000" min="0" step="100" inputmode="numeric">
+            </label>
+            <label>
+              <span>Your average customer revenue (£)</span>
+              <input type="number" id="calc-revenue" placeholder="e.g. 2500" min="0" step="50" inputmode="numeric">
+            </label>
+            <div class="calculator-assumptions">
+              <div><span>Assumed cost per lead</span><strong>£100</strong></div>
+              <div><span>Assumed cost per qualified lead</span><strong>£300</strong></div>
+            </div>
+          </div>
+          <div class="calculator-results">
+            <div class="result-card"><span>Leads generated</span><strong data-calc-leads>–</strong></div>
+            <div class="result-card"><span>Qualified leads</span><strong data-calc-qualified>–</strong></div>
+            <div class="result-card"><span>Estimated revenue</span><strong data-calc-revenue>–</strong></div>
+            <div class="result-card accent"><span>Return on ad spend</span><strong data-calc-roas>–</strong></div>
+          </div>
+        </div>
+        <p class="calculator-note reveal">Illustrative only, based on your inputs and the assumed cost figures above. Assumes each qualified lead is followed up promptly and has the potential to convert into a customer; actual conversion rates depend on your offer, sales process and follow-up speed. Ophiro does not guarantee lead volumes, closed deals, revenue or return on advertising spend.</p>
       </div>
     </section>
 
