@@ -429,12 +429,7 @@ p { line-height: 1.7; color: var(--body); }
   .journey-node { grid-template-columns: 42px 1fr; }
   .journey-node small { display: none; }
   .visual-footer > span:nth-child(2) { display: none; }
-  .credibility-bar { grid-template-columns: 1fr; margin-top: 60px; }
-  .credibility-bar > div { padding: 18px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .credibility-bar > div:first-child { padding-left: 0; padding-top: 0; }
-  .credibility-bar > div:last-child { display: flex; border-bottom: 0; padding-bottom: 0; }
-  .cred-primary span { max-width: 220px; }
-  .cred-item > span { font-size: .55rem; }
+  .credibility-bar { display: none; }
   .split-heading { grid-template-columns: 1fr; gap: 24px; }
   .section-heading { margin-bottom: 42px; }
   .flow-panel { padding: 22px 18px; }
