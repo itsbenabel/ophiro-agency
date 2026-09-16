@@ -113,8 +113,6 @@ p { line-height: 1.7; color: var(--body); }
 .cred-primary { gap: 18px; }
 .cred-primary strong { color: #fff; font-size: 2.35rem; letter-spacing: -.055em; }
 .cred-primary span { color: #768b9f; font-size: .66rem; line-height: 1.5; max-width: 175px; }
-.cred-item { gap: 12px; }
-.cred-icon { font-style: normal; width: 31px; height: 31px; display: grid; place-items: center; border: 1px solid rgba(121,178,236,.25); color: #6eb4f8; border-radius: 7px; font-size: .7rem; }
 .cred-item > span { display: grid; gap: 4px; color: #72879a; font-size: .59rem; }
 .cred-item strong { color: #c8d5e0; font-size: .69rem; }
 
@@ -431,11 +429,10 @@ p { line-height: 1.7; color: var(--body); }
   .journey-node { grid-template-columns: 42px 1fr; }
   .journey-node small { display: none; }
   .visual-footer > span:nth-child(2) { display: none; }
-  .credibility-bar { grid-template-columns: 1fr 1fr; margin-top: 60px; }
-  .credibility-bar > div { padding: 22px 14px; }
-  .credibility-bar > div:first-child { grid-column: 1 / -1; padding-left: 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .credibility-bar > div:nth-child(3) { border-right: 0; }
-  .credibility-bar > div:last-child { display: flex; border-right: 0; }
+  .credibility-bar { grid-template-columns: 1fr; margin-top: 60px; }
+  .credibility-bar > div { padding: 18px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .credibility-bar > div:first-child { padding-left: 0; padding-top: 0; }
+  .credibility-bar > div:last-child { display: flex; border-bottom: 0; padding-bottom: 0; }
   .cred-primary span { max-width: 220px; }
   .cred-item > span { font-size: .55rem; }
   .split-heading { grid-template-columns: 1fr; gap: 24px; }
