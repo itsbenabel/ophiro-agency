@@ -139,6 +139,7 @@ p { line-height: 1.7; color: var(--body); }
 .logo-hinsw { height: 32px; }
 .logo-escarlett { height: 24px; }
 .logo-stitchkraft { height: 18px; }
+.logo-earlofeast { height: 17px; }
 
 @media (prefers-reduced-motion: reduce) {
   .logo-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
