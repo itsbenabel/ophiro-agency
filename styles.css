@@ -131,6 +131,14 @@ p { line-height: 1.7; color: var(--body); }
 .logo-lerwick { height: 52px; }
 .logo-acahealth { height: 44px; }
 .logo-chiro { height: 24px; }
+.logo-browcode { height: 46px; }
+.logo-zone3 { height: 18px; }
+.logo-nikura { height: 20px; }
+.logo-thirdspace { height: 13px; }
+.logo-cms { height: 13px; }
+.logo-hinsw { height: 32px; }
+.logo-escarlett { height: 24px; }
+.logo-stitchkraft { height: 18px; }
 
 @media (prefers-reduced-motion: reduce) {
   .logo-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
