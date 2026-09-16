@@ -121,11 +121,21 @@ p { line-height: 1.7; color: var(--body); }
 /* Logo strip */
 .logo-strip { padding: 52px 0; background: var(--mist); border-bottom: 1px solid var(--line); }
 .logo-strip-label { margin: 0 0 28px; text-align: center; text-transform: uppercase; letter-spacing: .14em; font-size: .64rem; font-weight: 700; color: #97a3b0; }
-.logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 46px 56px; }
-.logo-item { height: 30px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .5; transition: filter .2s ease, opacity .2s ease; }
+.logo-marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.logo-track { display: flex; align-items: center; width: max-content; animation: logo-scroll 34s linear infinite; }
+.logo-marquee:hover .logo-track { animation-play-state: paused; }
+@keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.logo-item { height: 30px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .5; transition: filter .2s ease, opacity .2s ease; flex-shrink: 0; margin-right: 56px; }
 .logo-item:hover { filter: grayscale(0); opacity: 1; }
 .logo-telekom { height: 26px; }
 .logo-lerwick { height: 52px; }
+.logo-acahealth { height: 44px; }
+.logo-chiro { height: 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { animation: none; flex-wrap: wrap; justify-content: center; width: 100%; }
+  .logo-marquee { overflow: visible; -webkit-mask-image: none; mask-image: none; }
+}
 
 /* Shared headings */
 .section-heading { margin-bottom: 64px; }
