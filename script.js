@@ -90,6 +90,20 @@
     progressBar.style.width = '100%';
   });
 
+  const calSkeleton = document.querySelector('[data-calendar-skeleton]');
+  const calContainer = document.querySelector('#my-cal-inline-30min');
+  if (calSkeleton && calContainer) {
+    const hideSkeleton = () => calSkeleton.classList.add('is-hidden');
+    const watchForIframe = new MutationObserver(() => {
+      const iframe = calContainer.querySelector('iframe');
+      if (!iframe) return;
+      iframe.addEventListener('load', hideSkeleton, { once: true });
+      watchForIframe.disconnect();
+    });
+    watchForIframe.observe(calContainer, { childList: true });
+    window.setTimeout(hideSkeleton, 6000);
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, obs) => {
