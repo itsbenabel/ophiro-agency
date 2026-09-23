@@ -27,16 +27,6 @@
     });
   });
 
-  const marqueeToggle = document.querySelector('[data-marquee-toggle]');
-  const logoTrack = document.querySelector('.logo-track');
-  marqueeToggle?.addEventListener('click', () => {
-    const paused = logoTrack.classList.toggle('is-paused');
-    marqueeToggle.setAttribute('aria-pressed', String(paused));
-    marqueeToggle.setAttribute('aria-label', paused ? 'Play scrolling logos' : 'Pause scrolling logos');
-    marqueeToggle.querySelector('[data-icon-pause]').hidden = paused;
-    marqueeToggle.querySelector('[data-icon-play]').hidden = !paused;
-  });
-
   const calSkeleton = document.querySelector('[data-calendar-skeleton]');
   const calContainer = document.querySelector('#my-cal-inline-30min');
   if (calSkeleton && calContainer) {
