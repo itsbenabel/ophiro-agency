@@ -67,9 +67,13 @@
     if (event.target.closest('[data-back]')) showStep(currentStep - 1);
   });
 
+  const LOW_BUDGET = ['Not advertising yet', 'Under £3,000', '£3,000–£5,000'];
+  const LOW_VALUE = ['Under £3,000'];
   applyForm?.addEventListener('change', (event) => {
-    if (event.target.name !== 'budget' || !budgetNote) return;
-    budgetNote.hidden = !['Not advertising yet', 'Under £2,000'].includes(event.target.value);
+    if (!['budget', 'value'].includes(event.target.name) || !budgetNote) return;
+    const budget = applyForm.elements.budget.value;
+    const value = applyForm.elements.value.value;
+    budgetNote.hidden = !(LOW_BUDGET.includes(budget) || LOW_VALUE.includes(value));
   });
 
   applyForm?.addEventListener('keydown', (event) => {
