@@ -67,7 +67,7 @@
     if (event.target.closest('[data-back]')) showStep(currentStep - 1);
   });
 
-  const LOW_BUDGET = ['Not advertising yet', 'Under £3,000', '£3,000–£5,000'];
+  const LOW_BUDGET = ['Not advertising yet', 'Under £3,000'];
   const LOW_VALUE = ['Under £3,000'];
   applyForm?.addEventListener('change', (event) => {
     if (!['budget', 'value'].includes(event.target.name) || !budgetNote) return;
