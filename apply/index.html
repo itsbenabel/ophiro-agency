@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply | Ophiro</title>
+  <meta name="description" content="Apply to work with Ben Abel on a 12-week Google Ads build. Takes about two minutes, and Ben reads every one himself.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://ophiro.xyz/apply">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/apply/apply.css?v=1">
+</head>
+<body>
+  <header class="apply-bar">
+    <div class="apply-bar-inner">
+      <a class="apply-brand" href="/" aria-label="Ophiro home">
+        <span class="apply-brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>OPHIRO</span>
+      </a>
+      <span class="apply-tag">Application</span>
+    </div>
+  </header>
+
+  <main class="apply-wrap" data-apply-root>
+    <p class="apply-kicker">Ophiro · 12-Week Build</p>
+    <h1>Apply to work with me 1:1</h1>
+
+    <div class="letter">
+      <p>Hey business owner 👋</p>
+      <p>Glad you found your way here. I’m Ben, and I’m the whole agency. No account managers, no juniors, no hand-offs. Just me and a lot of well-behaved bots.</p>
+      <p>If you spend thousands a month on Google Ads to win high-value customers, fill this in and I’ll take a proper look at where you are. I only reach out if I’m confident I can help, so this is a real read, not a sales funnel.</p>
+      <p>The offer is a <strong>12-week build</strong>: a commitment to turn around your Google Ads results, taken seriously. I build your campaigns, a landing page that converts, a qualification journey on your sales criteria, instant email and SMS replies, CRM routing and proper tracking. Then I run it, test it and report on it with you every week until the 12 weeks are up.</p>
+      <p>I can only run 6 of these builds at any one time, so there’s sometimes a wait for a spot. It’s priced as a premium engagement. [Ben to confirm: price or range to show here.]</p>
+      <p>It suits businesses with customers worth £3,000+ on average and a £3,000+ monthly Google Ads budget. I don’t work with insurance or finance.</p>
+      <p><a href="/#offer">Cool beans</a>, we’re done with the intro. Now fill in the juicy bits below 👇</p>
+    </div>
+
+    <hr class="apply-rule">
+
+    <form class="apply-form" data-apply-form novalidate>
+      <div class="honeypot" aria-hidden="true">
+        <label>Leave this field empty <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Your email</label>
+        <span class="hint">This is where I’ll reply.</span>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="website">Your website</label>
+        <span class="hint">So I can see what you sell and how you talk about it.</span>
+        <input id="website" name="website" type="url" placeholder="https://" autocomplete="url" required>
+      </div>
+
+      <div class="field">
+        <label for="sell">What do you sell, and what is a customer worth on average?</label>
+        <span class="hint">A service, a product, a treatment, a project. Rough figures are fine.</span>
+        <textarea id="sell" name="sell" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="budget">Roughly how much do you spend on Google Ads per month?</label>
+        <span class="hint">So I know whether we’re building a first campaign or fixing one.</span>
+        <select id="budget" name="budget" required>
+          <option value="">Pick one</option>
+          <option>Not advertising yet</option>
+          <option>Under £3,000</option>
+          <option>£3,000 to £10,000</option>
+          <option>£10,000 to £30,000</option>
+          <option>£30,000+</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="today">Where do enquiries come from today, and what isn’t working?</label>
+        <span class="hint">Referrals, Google, word of mouth, an agency that went quiet. Two or three lines. The more honest you are, the better.</span>
+        <textarea id="today" name="today" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="done">What does done look like 12 weeks from now?</label>
+        <span class="hint">Be specific. “More leads” tells me nothing. “Ten qualified enquiries a month at a cost I can live with” tells me everything.</span>
+        <textarea id="done" name="done" required></textarea>
+      </div>
+
+      <div class="consent">
+        <label>
+          <input type="checkbox" name="consent" required>
+          <span>The build is 12 weeks and priced as a premium engagement, with ad spend paid directly to Google. I’m ready to invest, and happy for you to email me the details. I’ve read the <a href="/privacy/">privacy notice</a>.</span>
+        </label>
+      </div>
+
+      <p class="not-ready">Not there yet? No hard feelings. Don’t send the form. Take a look at the <a href="/#how">how it works</a> section instead.</p>
+
+      <button class="submit" type="submit" data-submit>Submit</button>
+      <p class="submit-note">Takes about two minutes. I read every one myself.</p>
+      <p class="form-error" role="alert" data-error hidden></p>
+    </form>
+
+    <section class="thanks" data-thanks tabindex="-1" aria-live="polite">
+      <h2>Got it, thank you.</h2>
+      <p>I read every application myself. If I’m confident I can help, you’ll hear from me by email, usually within two working days. If I’m not, I’ll tell you that too, and point you somewhere better where I can.</p>
+      <p><a href="/">Back to ophiro.xyz</a></p>
+    </section>
+  </main>
+
+  <footer class="apply-foot">
+    <span>© <span data-year></span> Ophiro Agency Ltd · <a href="/privacy/">Privacy</a></span>
+  </footer>
+
+  <script src="/apply/apply.js?v=1"></script>
+</body>
+</html>
