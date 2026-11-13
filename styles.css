@@ -463,3 +463,8 @@ p { line-height: 1.7; color: var(--body); }
   .mobile-sticky { background: var(--blue); border-color: transparent; color: #fff; box-shadow: 0 12px 30px rgba(23,107,255,.35); }
 }
 
+
+/* Logo image */
+.brand-logo { display: block; height: 34px; width: auto; }
+.footer-brand .brand-logo { height: 34px; }
+@media (max-width: 760px) { .brand-logo { height: 28px; } }

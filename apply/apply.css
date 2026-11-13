@@ -171,3 +171,5 @@ a { color: inherit; }
   .apply-wrap { padding: 36px 0 72px; }
   .apply-tag { display: none; }
 }
+
+.brand-logo { display: block; height: 32px; width: auto; }
