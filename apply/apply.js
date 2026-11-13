@@ -1,7 +1,7 @@
 (() => {
   // Where applications are sent. Set this to a form endpoint (Formspree, Resend
   // function, Zapier webhook, etc.) that accepts a JSON POST. Left empty on purpose.
-  const APPLY_ENDPOINT = '';
+  const APPLY_ENDPOINT = '/api/apply';
 
   const root = document.querySelector('[data-apply-root]');
   const form = document.querySelector('[data-apply-form]');
